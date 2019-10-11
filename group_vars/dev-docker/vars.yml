@@ -1,0 +1,7 @@
+---
+container_name: "pipeline-1-hello-world"
+image_name: "pipeline-1-hello-world"
+image_tag: "latest"
+ports:
+# Define environment specific config here.
+env:

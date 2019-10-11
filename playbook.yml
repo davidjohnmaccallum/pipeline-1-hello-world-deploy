@@ -1,0 +1,11 @@
+---
+- hosts: "{{ variable_host | default('dev-docker') }}"
+  any_errors_fatal: true
+  tasks:
+    - docker_container:
+        name: "{{container_name}}"
+        image: "{{container_registry}}{{image_name}}:{{image_tag}}"
+        state: started
+        pull: true
+        ports: "{{ports}}"
+        env: "{{env}}"
